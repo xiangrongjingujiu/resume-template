@@ -1,0 +1,10 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{languageSelection}[2021/02/06 select English or Chinese as the language of formal output pdf]
+
+\newcommand{\CN}[1]{{#1}}
+\newcommand{\EN}[1]{{#1}}
+
+\DeclareOption{English}{\renewcommand{\CN}[1]{{}}}
+\DeclareOption{Chinese}{\renewcommand{\EN}[1]{{}}}
+\DeclareOption*{\PackageWarning{languageSelection}{Unknown ‘\CurrentOption’}}
+\ProcessOptions\relax

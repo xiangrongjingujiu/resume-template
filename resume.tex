@@ -1,0 +1,249 @@
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} 
+\usepackage{linespacing_fix}
+\usepackage{cite}
+\usepackage{comment}
+
+% you should read https://www.overleaf.com/learn/latex/Learn_LaTeX_in_30_minutes to learn basic latex
+
+% read manual https://github.com/xiangrongjingujiu/latex-languageSelection
+\usepackage[English]{languageSelection}
+
+% read manual https://github.com/xiangrongjingujiu/latex-note-plus
+\usepackage[color=blue]{notePlus} 
+
+
+\begin{document}
+\pagenumbering{gobble}
+
+% "%"后面的所有内容是注释而非代码，不会输出到最后的PDF中
+% 使用本模板，只需要参照输出的PDF，在本文档的相应位置做简单替换即可
+% 修改之后，输出更新后的PDF，只需要点击Overleaf中的“Recompile”按钮即可
+
+% 填写你的名字
+\CN{
+  \name{方鸿渐}
+}
+\EN{
+  \name{Jianhong Fang}
+}
+%**********************************相关信息****************************************
+% \otherInfo后面的四个大括号里的所有信息都会在一行输出，最多使用四个大括号，填写四个信息
+% 如果选择不填信息，那么大括号必须空着不写，而不能删除大括号。
+% 如果想要把信息写两行，那就用两次指令\otherInfo{}{}{}{}即可
+\CN{
+  \info{手机：(+86) 1234567890}{邮箱：test@test.test}{}{}
+  \info{性别：男}{籍贯：江南}{}{}
+  \info{来历：钱钟书《围城》}{}{}{}
+}
+\EN{
+  \info{mobile: (+86) 1234567890}{email: test@test.test}{}{}
+  \info{Gender: Male}{Hometown: South China}{}{}
+  \info{Origin: Fortress Besieged}{}{}{}
+}
+
+%*********************************照片**********************************************
+%照片需要放到images文件夹下，名字必须是you.jpg，如果不需要照片可以注释掉此行命令
+%0.15的意思是，照片的大小是0.15倍，调整大小，避免遮挡文字
+\yourphoto{0.15}
+%**********************************正文**********************************************
+
+
+%***大标题，下面有横线做分割
+%***一般的标题有：教育背景，实习（项目）经历，工作经历，自我评价，求职意向，等等
+\CN{
+  \section{教育背景}
+}
+\EN{
+  \section{EDUCATION}
+}
+
+%***********一行子标题**************
+%***第一个大括号里的内容向左对齐，第二个大括号里的内容向右对齐
+%***\textbf{}括号里的字是粗体，\textit{}括号里的字是斜体
+\CN{
+  \datedsubsection{\textbf{克莱登大学}，克莱登实验班，\textit{博士}}{1910.09 - 1930.06}
+}
+\EN{
+  \datedsubsection{\textbf{Clayden University}, Clayden Experimental Class, \textit{PhD}}{1910.09 - 1930.06}
+}
+
+
+%***********列举*********************
+%***可添加多个\item，得到多个列举项，类似的也可以用\textbf{}、\textit{}做强调
+\CN{
+  \begin{itemize} [parsep=1ex]
+    \item \textbf{证书来源}：购买自爱尔兰商人
+  \end{itemize}
+}
+\EN{
+  \begin{itemize} [parsep=1ex]
+    \item \textbf{Certificate source}: purchased from an Irish businessman
+  \end{itemize}
+}
+
+\CN{
+  \datedsubsection{\textbf{北平某大学}，实验班，\textit{本科}}{1922.09 - 1926.06}
+}
+\CN{
+  \begin{itemize} [parsep=1ex]
+    \item \textbf{土木工程系}：不喜欢，转系
+    \item \textbf{社会学系}：不喜欢，转系
+    \item \textbf{中国文学系}：从此毕业
+  \end{itemize}
+}
+\more{这是一条笔记，详细用法参见notePlus的说明}
+\EN{
+  \datedsubsection{\textbf{A university in Beiping}, experimental class, \textit{Undergraduate}}{1922.09 - 1926.06}
+  \begin{itemize} [parsep=1ex]
+    \item \textbf{Department of Civil Engineering}: I don't like it, change department
+    \item \textbf{Department of Sociology}: I don't like it, change department
+    \item \textbf{Department of Chinese Literature}: graduated
+  \end{itemize}
+}
+
+\CN{
+  \section{职业经历}
+}
+\EN{
+  \section{CAREER}
+}
+
+\CN{
+  \datedsubsection{\textbf{点金银行}，职员}{1930.09}
+  \begin{itemize}[parsep=0.5ex]
+    \item 高中订婚的未婚妻的父亲的公司
+  \end{itemize}
+}
+\EN{
+  \datedsubsection{\textbf{Cash bank}, clerk}{1930.09}
+  \begin{itemize}[parsep=0.5ex]
+    \item The company of the father of the betrothed fiancee in high school
+  \end{itemize}
+}
+
+
+\CN{
+  \datedsubsection{\textbf{三闾大学}，副教授}{1931.09 - 1934.6}
+  \begin{itemize}[parsep=0.5ex]
+    \item 同事：李梅亭、顾尔谦、孙柔嘉、赵辛楣
+  \end{itemize}
+}
+\EN{
+  \datedsubsection{\textbf{Sanlu University}, Associate Professor}{1931.09 - 1934.6}
+  \begin{itemize}[parsep=0.5ex]
+    \item Colleagues: Li Meiting, Gu Erqian, Sun Roujia, Zhao Xinmei
+  \end{itemize}
+}
+
+\CN{
+  \datedsubsection{\textbf{上海某报社}，职员}{1934.09 -}
+  \begin{itemize}[parsep=0.5ex]
+    \item 生活不如意
+  \end{itemize}
+}
+\EN{
+  \datedsubsection{\textbf{A newspaper in Shanghai}, staff}{1934.09 -}
+  \begin{itemize}[parsep=0.5ex]
+    \item Life is unsatisfactory
+  \end{itemize}
+}
+
+
+\CN{
+  \section{情感经历}
+}
+\EN{
+  \section{LOVE}
+}
+\CN{
+  \datedsubsection{\textbf{鲍小姐}，一夜情}{1930.06}
+  \begin{itemize}[parsep=0.5ex]
+    \item \textbf{地点}：回国船上
+  \end{itemize}
+}
+\EN{
+  \datedsubsection{\textbf{Miss Bao}, one night stand}{1930.06}
+  \begin{itemize}[parsep=0.5ex]
+    \item \textbf{Location}: On board the returning ship
+  \end{itemize}
+}
+
+\CN{
+  \datedsubsection{\textbf{苏文纨}，单恋}{1930.08 - 1931.08}
+  \begin{itemize}[parsep=0.5ex]
+    \item \textbf{地点}：上海
+    \item 苏小姐一直钟情于方鸿渐，这也是以挑性的也错以为方鸿渐对其有意
+    \item 方鸿渐在月夜下情境所迫，吻了苏小姐，第二日不得不告诉苏小姐自己所爱并非她
+  \end{itemize}
+}
+\EN{
+  \datedsubsection{\textbf{Su Wenwan}, unrequited love}{1930.08 - 1931.08}
+  \begin{itemize}[parsep=0.5ex]
+    \item \textbf{Location}: Shanghai
+    \item Ms. Su has always been in love with Fang Hongjian, which is also challenging and wrong to think that Fang Hongjian is interested in it
+    \item Fang Hongjian was forced to kiss Ms. Su under the moonlit night, and the next day he had to tell Ms. Su that he was not in love with her
+  \end{itemize}
+}
+
+\CN{
+  \datedsubsection{\textbf{唐晓芙}，热恋}{1930.08 - 1931.08}
+  \begin{itemize}[parsep=0.5ex]
+    \item \textbf{地点}：上海
+    \item 闲暇之余经常去苏小姐家探望，由此结识了苏小姐的表妹唐晓芙唐小姐
+    \item 由于苏小姐挑拨，唐小姐也与方鸿渐一刀两断
+  \end{itemize}
+}
+\EN{
+  \datedsubsection{\textbf{Tang Xiaofu}, passionately in love}{1930.08 - 1931.08}
+  \begin{itemize}[parsep=0.5ex]
+    \item \textbf{Location}: Shanghai
+    \item In my spare time, I often visit Miss Su's house and get to know Miss Su's cousin Tang Xiaofu Tang
+    \item Due to Miss Su's provocation, Miss Tang also broke with Fang Hongjian
+  \end{itemize}
+}
+
+\CN{
+  \datedsubsection{\textbf{孙柔嘉}，妻子}{1934.08 -}
+  \begin{itemize}[parsep=0.5ex]
+    \item \textbf{订婚地点}：三闾大学
+    \item 方、孙二人在赵辛楣家中遇上苏文纨，神情谈吐间遭到苏小姐的讽刺
+    \item 二人回到上海，因工作、父母、亲戚妯娌等多方面问题又多次激发矛盾
+  \end{itemize}
+}
+\EN{
+  \datedsubsection{\textbf{Sun Roujia}, wife}{1934.08 -}
+  \begin{itemize}[parsep=0.5ex]
+    \item \textbf{Engagement location}: Sanlu University
+    \item Fang and Sun met Su Wenwan at Zhao Xinmei's home, and they were satirized by Miss Su
+    \item When the two returned to Shanghai, conflicts were aroused many times due to various problems such as work, parents, relatives and wives
+  \end{itemize}
+}
+
+\CN{
+\section{简历写作注意事项}
+
+写作时不要泛泛而谈太笼统，要应用STAR原则，即Situation（情景）、Task（任务）、Action（行动）和Result（结果）四个英文单词的首字母组合。
+
+\begin{itemize}[parsep=0.5ex]
+  \item S指的是situation，事情是在什么情况下发生
+  \item T指的是task，你是如何明确你的目标的
+  \item A指的是action，针对这样的情况分析，你采用了什么行动方式
+  \item R指的是result，结果怎样，在这样的情况下你学习到了什么
+\end{itemize}
+}
+
+\EN{
+\section{Resume writing notes}
+
+
+\begin{itemize}[parsep=0.5ex]
+  \item S refers to the situation, under what circumstances did things happen
+  \item T refers to the task, how do you define your goal
+  \item A refers to the action, what kind of action did you take in this situation analysis
+  \item R refers to result, what is the result, what did you learn in this situation
+\end{itemize}
+}
+
+
+\end{document}

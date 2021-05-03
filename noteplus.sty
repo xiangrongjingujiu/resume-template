@@ -1,0 +1,33 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{noteplus}[2021/02/06 take inline/margin invisible/visible notes]
+
+\RequirePackage[]{todonotes} % add notes
+\RequirePackage[]{xcolor} % color names
+\RequirePackage{xkeyval} % use color=red as option for package
+\newcommand{\@notePlus@color}{red}
+\DeclareOptionX{color}{\renewcommand{\@notePlus@color}{#1}}
+\newcommand{\@notePlus@size}{\normalsize}
+\DeclareOption{small}{\renewcommand{\@notePlus@size}{\footnotesize}}
+\DeclareOption{smaller}{\renewcommand{\@notePlus@size}{\scriptsize}}
+\DeclareOption{smallest}{\renewcommand{\@notePlus@size}{\tiny}}
+\newcommand{\todonotesInlineOrMargin}[2]{\todo[linecolor=\@notePlus@color,backgroundcolor=white,bordercolor=white,textcolor=\@notePlus@color,size=\@notePlus@size,#1,caption={}]{{#2}}}
+% in order to itemize inside todonote, caption={} is added to the options of command, which will conflict with prependcaption option of package.
+\DeclareOption{backgroundColored}{\renewcommand{\todonotesInlineOrMargin}[2]{\todo[linecolor=\@notePlus@color,backgroundcolor=\@notePlus@color!20,bordercolor=\@notePlus@color,size=\@notePlus@size,#1,caption={}]{{#2}}}}
+\newcommand{\more}[1]{\todonotesInlineOrMargin{inline}{{#1}}}
+
+\DeclareOption{margin}{\renewcommand{\more}[1]{\todonotesInlineOrMargin{noinline}{#1}}}
+
+\DeclareOption{invisible}{\renewcommand{\more}[1]{{}}}
+
+% there are two kinds of options, special one with xkeyval (\DeclareOptionX), plain one (\DeclareOption), they are unknown to the other kind, so there will be warning, just ignore 
+\DeclareOptionX*{\PackageWarning{notePlus}{Unknown ‘\CurrentOption’}}
+\ProcessOptionsX\relax
+\DeclareOption*{\PackageWarning{notePlus}{Unknown ‘\CurrentOption’}}
+\ProcessOptions\relax
+
+% the second solution is to use macro in the document instead of collect the macro in a package, which is much simpler
+% the first package method needs to pass arguments through options, which is complex for developer, but it will expose simple interface to user
+% the second direct macro method required user to manually edit the macro, which is difficult for user, but the developer will have a simple job without passing options
+% \newcommand{\coloradd}{red} 
+% \newcommand{\addmore}[1]{\todo[linecolor=\coloradd,backgroundcolor=white,bordercolor=white,textcolor=\coloradd,inline,disable]{#1}}
+
