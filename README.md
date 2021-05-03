@@ -16,3 +16,7 @@
 - method 2: use overleaf template directly 直接使用overleaf模板
 
 ![usage](images/overleaf.jpg)
+
+- use Xelatex compiler 使用Xelatex编译器
+- you only need to edit ```resume.tex``` 只需要修改```resume.tex```
+- compare and find out the relation between words in ```resume.tex``` and words in printed pdf, you can know how to write your own resume 通过比较```resume.tex```中的文字和输出的PDF中的文字的对应关系，可以知道如何修改模板，成为自己的简历
