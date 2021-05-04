@@ -13,7 +13,7 @@
 ## usage 使用方法
 
 - method 1: download this repo as zip and upload to overleaf 下载为本仓库为ZIP文件，上传到overleaf
-- method 2: use overleaf template directly 直接使用overleaf模板
+- method 2: use overleaf template directly 直接使用overleaf模板 https://www.overleaf.com/latex/templates/chinese-english-resume-template-zhong-ying-shuang-yu-jian-li-mo-ban/nmwszfjntkyr
 
 ![usage](images/overleaf.jpg)
 
